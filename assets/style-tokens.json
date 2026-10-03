@@ -1,0 +1,95 @@
+{
+  "version": "1.0",
+  "owner": "academic deliverables",
+  "ppt": {
+    "themes": {
+      "academic": {
+        "label": "纯学术（组会/答辩/课程汇报）",
+        "background": "#FFFFFF",
+        "primary": "#1F6B4F",
+        "primary_tint": "#E8F1EC",
+        "text": "#1A1A1A",
+        "text_secondary": "#5A5A5A",
+        "accent_alert": "#B3202C",
+        "note": "学术场景默认使用克制的白色与单一主色"
+      },
+      "government": {
+        "label": "政府汇报（公文式）",
+        "background": "#FFFFFF",
+        "primary": "#B3202C",
+        "primary_tint": "#F5E9EA",
+        "primary_dark": "#7A1219",
+        "text": "#1A1A1A",
+        "note": "正式汇报可使用黑、白、红及其明度变化"
+      },
+      "showcase": {
+        "label": "竞选/展示（高级质感、易读）",
+        "background": "#FFFFFF",
+        "primary": "#16324F",
+        "primary_tint": "#E9EEF4",
+        "accent": "#C8A45C",
+        "text": "#1A1A1A",
+        "note": "美观整齐高级质感，但依然不要花里胡哨、不要排版拥挤"
+      },
+      "homework": {
+        "label": "课程作业 PPT",
+        "background": "#FFFFFF",
+        "primary": "#1A1A1A",
+        "primary_tint": "#F0F0F0",
+        "text": "#1A1A1A",
+        "note": "配色格式一定要简单，页数不要过多"
+      }
+    },
+    "type_scale_pt": {
+      "slide_title": 28,
+      "body_l1": 18,
+      "body_l2": 14,
+      "caption": 10,
+      "min_absolute": 10
+    },
+    "fonts": {
+      "main": { "name": "微软雅黑", "note": "正文/标题主字体，全篇统一" },
+      "annotation": { "name": "楷体", "note": "注释/图注/表注" }
+    },
+    "limits": {
+      "max_slides": 15,
+      "max_chars_per_slide": 420,
+      "max_hues": 2,
+      "visual_anchor_per_slide": 1
+    },
+    "script_words": { "3min": [750, 850], "5min": [1250, 1400] }
+  },
+  "word": {
+    "fonts": {
+      "body": { "name": "宋体", "size_pt": 12, "note": "小四" },
+      "h1": { "name": "黑体", "size_pt": 16, "note": "三号" },
+      "h2": { "name": "黑体", "size_pt": 14, "note": "四号" },
+      "h3": { "name": "黑体", "size_pt": 12, "note": "小四" },
+      "note": { "name": "楷体", "size_pt": 10.5, "note": "五号" },
+      "formula": { "name": "Times New Roman", "italic": true, "format": "OMML" },
+      "code": { "name": "Consolas", "size_pt": 10.5 }
+    },
+    "layout": {
+      "line_spacing": 1.5,
+      "allowed_text_colors": ["#000000"],
+      "allowed_image_colors": ["#000000", "#FF0000", "#0000FF", "#808080"],
+      "table_bg": "#FFFFFF",
+      "header_footer": false,
+      "page_number": false,
+      "table_style": "three-line",
+      "grouping": "无框表格把同一题内容框在一起",
+      "keep_together": true,
+      "comment": "同一个题的原始输出与图表禁止跨页"
+    },
+    "citation": {
+      "format": "作者（年代）",
+      "allowed_sources": ["CSSCI", "SSCI", "北大核心", "南大核心", "UTD24", "FT50", "Nature", "Science"],
+      "forbidden_sources": ["博士论文", "硕士论文", "本科论文", "新闻报道", "公众号", "百科"],
+      "require_traceable": true
+    },
+    "naming": {
+      "output_pattern": "{题号}+原始输出[+序号]",
+      "code_aggregation": "所有源码汇总为单一 do/py 文件"
+    }
+  }
+}
