@@ -1,6 +1,6 @@
 ---
 name: academic-deliverables
-description: 制作或审查学术 PPT 与 Word 交付物时使用，覆盖需求确认、排版、可编辑性、内容质量、引用规范和交付前自检。
+description: 制作或审查学术 PPT 与 Word 交付物时使用，覆盖需求确认、排版、可编辑性、内容质量、引用规范、读后感/课程感悟类写作和交付前自检。
 metadata:
   short-description: 学术 PPT 与 Word 交付规范
 ---
@@ -15,6 +15,7 @@ metadata:
 | --- | --- |
 | PPT、幻灯片、汇报、答辩、组会 | `references/ppt-spec.md` + `references/anti-ai-checklist.md` |
 | Word、文档、作业、综述、报告、纪要 | `references/word-spec.md` + `references/anti-ai-checklist.md` |
+| 读后感、读书报告、课程感悟、心得、研修反思 | `references/reflection-spec.md` + `references/word-spec.md` + `references/anti-ai-checklist.md` |
 | PPT + Word | 同时加载上述 PPT、Word 与 anti-AI 规范 |
 | 需求不完整 | 读取 `references/prompt-intake.md`，一次性补齐关键信息 |
 
@@ -47,6 +48,16 @@ metadata:
 - 图表必须与正文相互指涉，并说明其支持的结论。
 - 修订既有材料时，先识别保留项，再改动问题项；未经允许不要删除用户提供的内容。
 
+### 读后感 / 课程感悟 / 读书报告
+
+这类交付物的失败不在排版，而在文体：写成课程笔记、写成检讨书、写成 AI 总结。三条硬性指标先立住——
+
+- **五步单元**：每个自然段走完「旧认知 → 触发事件 → 认知断裂 → 新命题 → 回扣自身」，顺序不可乱；缺最后一步就只是读书笔记。
+- **内容配比**：课程/书中内容转述 55–65%，自我经历与反思 35–45%，两者必须**交织**而非分段割裂。
+- **具体物**：每段至少 1 处地名、人数、金额、时间或原话；抽象判断后必须跟具体物。
+
+另有禁用词表、八股文对照改写和 10 项交稿自检，详见 `references/reflection-spec.md`。若使用者另有个人文风 skill，按该文件第十二节叠加，个人声音优先、但上述三条底线不可覆盖。
+
 ### 引用与学术诚信
 
 - 文献和数据必须真实、可追溯；不确定时不编造。
@@ -65,12 +76,13 @@ metadata:
 1. 读取适用规范和反馈模式。
 2. 补齐任务变量并确认提纲。
 3. 生成内容与版式。
-4. 检查结构、证据、引用、可编辑性和隐私。
+4. 检查结构、证据、引用、可编辑性和隐私；读后感类另按 `references/reflection-spec.md` 第九节逐条自检。
 5. 运行对应自检脚本：
 
 ```bash
 python3 scripts/check_pptx.py <file.pptx>
 python3 scripts/check_docx.py <file.docx>
+python3 scripts/check_docx.py <file.docx> --mode reflection   # 读后感 / 课程感悟 / 读书报告
 ```
 
 6. 修复失败项，并随交付说明验证结果与剩余限制。
@@ -83,5 +95,6 @@ python3 scripts/check_docx.py <file.docx>
 2. 内容与结构：论点、证据、层次、过渡、图文关系。
 3. 格式与交付：可编辑性、分页、命名、输出位置。
 4. 学术诚信与隐私：来源真实性、措辞强度、个人身份线索。
+5. 读后感类文体：五步单元、内容配比、具体物密度、禁用词、结尾姿态（见 `references/reflection-spec.md`）。
 
 可选附加项只在用户需要时提供：讲稿、生成脚本、来源说明、复现说明、学术漏洞与易受质疑点清单。
